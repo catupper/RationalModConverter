@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Rational Modulo Converter",
+  "short_name": "RATMOD",
+  "version": "0.0.1",
+  "description": "reconstruct rational number from modulo",
+  "content_scripts": [
+    {
+      "matches": ["https://atcoder.jp/*"],
+      "js": ["convert.js"]
+    }
+  ]
+}
