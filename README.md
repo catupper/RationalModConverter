@@ -17,4 +17,5 @@ chrome://extensions/ の「パッケージ化されていない拡張機能を�
 ## その他
 
 PR大歓迎です．Issue建ててくれたら見ます．
-何かあったらご連絡ください: @catupper
+
+何かあったらご連絡ください: [@catupper](https://twitter.com/catupper)
