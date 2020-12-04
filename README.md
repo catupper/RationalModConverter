@@ -6,8 +6,8 @@ AtCoderのModをとる問題の問題文の中で，だいたいsqrt(Mod)より�
 
 ## 細かい仕様
 
-問題分のinnerHTML内に99844353, 1000000007, 10^{9}+7などが現れたら「Modを取る問題」と判定します．
-2x^2 ≦ Modの場合，https://en.wikipedia.org/wiki/Rational_reconstruction_(mathematics) のアルゴリズムに従って有理数に戻します．
+問題文のinnerHTML内に99844353, 1000000007, 10^{9}+7などが現れたら「Modを取る問題」と判定します．
+2x^2 > Modとなる整数xを見つけた場合，https://en.wikipedia.org/wiki/Rational_reconstruction_(mathematics) のアルゴリズムに従って構築した有理数を赤字で横に表示します．
 
 ## 使い方
 
