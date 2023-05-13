@@ -57,10 +57,10 @@ window.onload = function() {
     var mod = -1;
     var statement = document.getElementById("task-statement");
     var src = statement.innerHTML;
-    if(src.indexOf("998244353") != -1){
+    if(src.indexOf("998244353") != -1 || src.indexOf("998,244,353") != -1){
         mod = 998244353;
     }
-    if(src.indexOf("1000000007") != -1 || src.indexOf("10^{9}+7") != -1){
+    if(src.indexOf("1000000007") != -1 || src.indexOf("10^{9}+7") != -1 || src.indexOf("1,000,000,007") != -1){
         mod = 1000000007;
     }
     if(mod != -1){
