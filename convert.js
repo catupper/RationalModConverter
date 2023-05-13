@@ -19,21 +19,34 @@ const add_rational_expression = function(original, mod){
     original += '*';
     var buffer = "";
     var res = "";
+    var tagParsing = false;
     for(var i = 0;i < original.length;i++){
         var c = original[i];
-        if('0' <= c && c <= '9'){
-            buffer += c;
+        if('<' == c) {
+            tagParsing = true;
+            res += buffer;
+            buffer = "";
         }
-        else{
-            if(buffer != ""){
-                var num = parseInt(buffer);
-                if(num < mod && num * num * 2 > mod){
-                    w = reconstruct(num, mod);
-                    buffer += ' <font color="red">' + w[0] + "/" + w[1] + "</font> ";
-                }
-                res += buffer;
-                buffer = "";
+        else if('>' == c) {
+            tagParsing = false;
+        }
+        if(!tagParsing) {
+            if('0' <= c && c <= '9'){
+                buffer += c;
             }
+            else{
+                if(buffer != ""){
+                    var num = parseInt(buffer);
+                    if(num < mod && num * num * 2 > mod){
+                        w = reconstruct(num, mod);
+                        buffer += ' <font color="red">' + w[0] + "/" + w[1] + "</font> ";
+                    }
+                    res += buffer;
+                    buffer = "";
+                }
+                res += c;
+            }
+        }else {
             res += c;
         }
     }
